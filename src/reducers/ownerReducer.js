@@ -1,6 +1,12 @@
 
-export default function ownerReducer(state = {owners: []}, action) {
-  return action.payload
-  //we can see that the action is coming in correctly and the store is 
-  //properly updated by reducer
+export default function ownerReducer(state = { owners: [] }, action) {
+  switch(action.type) {
+    case 'FETCH_OWNERS':
+      return { owners: action.payload}
+    
+    default:
+      return state
+
+  }
+  
 }
