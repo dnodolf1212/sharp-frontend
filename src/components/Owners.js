@@ -1,11 +1,13 @@
-import React from 'react' 
+import React from 'react';
+import OwnerShow from './OwnerShow.js'
 
 const Owners = (props) => {
    
   return (
-    <div>
-      {props.owners.map(owner => <li key={owner.id}>{owner.ownername} - {owner.location}</li> )}
-    </div>
+    <>
+      {props.owners.map( owner => 
+      <div key={owner.id }> <OwnerShow owner={props.owner}/> </div> )}
+    </>
   )
 }
 export default Owners

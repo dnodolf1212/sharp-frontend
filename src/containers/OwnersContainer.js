@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { Route } from 'react-router-dom';
 import { fetchOwners } from '../actions/fetchOwners.js';
 import Owners from '../components/Owners.js';
+import OwnerShow from '../components/OwnerShow.js';
 import OwnerInput from '../components/OwnerInput.js';
 
 
@@ -12,12 +13,17 @@ class OwnersContainer extends React.Component {
     this.props.fetchOwners()
   }
   
-  render() {
+  render() { 
     return (
       <div>
-      OwnersContainer - Im rendering both OwnerInput and Owners
-        <OwnerInput />
-        <Owners owners={this.props.owners}/>
+        <Route exact path='/owners/new' component={OwnerInput}/>
+
+        <Route exact path='/owners/:id' render={(routerProps) => 
+          <OwnerShow {...routerProps} owners={this.props.owners}/>} />
+
+        <Route exact path='/owners' render={(routerProps) => 
+          <Owners {...routerProps} owners={this.props.owners}/>} />
+        
       </div>
     )
   }
