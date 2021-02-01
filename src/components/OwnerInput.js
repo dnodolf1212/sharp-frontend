@@ -7,6 +7,7 @@ class OwnerInput extends React.Component { //controlled form with local state
   state = {
     ownername: '',
     location: ''
+   
   };
 
   handleOnChange = (event) => {
@@ -20,12 +21,19 @@ class OwnerInput extends React.Component { //controlled form with local state
     this.props.createOwner(this.state)
     this.setState({
       ownername: '',
-      location: ''
+      location: '',
+     
+    });
+  };
+
+  onImageChange = event => {
+    this.setState({
+
     });
   };
 
 
-  render(){
+  render() {
     return(
       <div>
         <form onSubmit={this.handleOnSubmit}>
@@ -39,7 +47,7 @@ class OwnerInput extends React.Component { //controlled form with local state
           <input type="text" placeholder="Location" 
           onChange={this.handleOnChange} name="location" value={this.state.location} />
           <br />
-
+          
           <input type="submit" />
         </form>
       </div>

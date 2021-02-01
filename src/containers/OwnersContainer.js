@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { fetchOwners } from '../actions/fetchOwners.js';
 import Owners from '../components/Owners.js';
 import OwnerShow from '../components/OwnerShow.js';
@@ -13,23 +13,24 @@ class OwnersContainer extends React.Component {
     this.props.fetchOwners()
   }
   
-  render() { 
+  render() {  
     return (
       <div>
-        <Route exact path='/owners/new' component={OwnerInput}/>
+        <Switch>
+          <Route path='/owners/new' component={OwnerInput}/>
 
-        <Route exact path='/owners/:id' render={(routerProps) => 
-          <OwnerShow {...routerProps} owners={this.props.owners}/>} />
+          <Route path='/owners/:id' render={(routerProps) => 
+            <OwnerShow {...routerProps} owners={this.props.owners}/>} />
 
-        <Route exact path='/owners' render={(routerProps) => 
-          <Owners {...routerProps} owners={this.props.owners}/>} />
-        
+          <Route path='/owners' render={(routerProps) => 
+            <Owners {...routerProps} owners={this.props.owners}/>} />
+        </Switch>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => { // to see stuff from the store and map it to props
+const mapStateToProps = state => { 
   return {
    owners: state.owners 
   }
