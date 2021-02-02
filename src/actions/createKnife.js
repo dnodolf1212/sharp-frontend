@@ -1,15 +1,15 @@
-export const createKnife = (data) => {
+export const createKnife = (knife, ownerID) => {
 
   return (dispatch) => {
-    fetch('http://localhost:3000/api/v1/knives', { //api/vi/owners/:id/knives ???
+    fetch(`http://localhost:3000/api/v1/owners/${ownerID}/knives`, { //api/vi/owners/:id/knives ???
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
         },
       method: 'POST',
-      body: JSON.stringify(data)
+      body: JSON.stringify(knife)
     })
     .then(res => res.json())
-    .then(knife => dispatch({ type: 'ADD_KNIFE', payload: knife}))
+    .then(owner => dispatch({ type: 'ADD_KNIFE', payload: owner}))
   }
 }

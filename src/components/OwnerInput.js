@@ -24,6 +24,7 @@ class OwnerInput extends React.Component { //controlled form with local state
       location: '',
      
     });
+    // redirect to '/owners' ???
   };
 
   onImageChange = event => {
@@ -44,7 +45,7 @@ class OwnerInput extends React.Component { //controlled form with local state
           onChange={this.handleOnChange} name="ownername" value={this.state.ownername} />
           <br />
 
-          <input type="text" placeholder="Location" 
+          <input type="text" placeholder="location" 
           onChange={this.handleOnChange} name="location" value={this.state.location} />
           <br />
           
