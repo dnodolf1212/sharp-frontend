@@ -7,7 +7,7 @@ export const KnifeShow = () => {
     <div>
       {props.knives.map( knife => 
         <li key={knife.id}>
-          {knife.category}/{knife.brand} : {knife.description}
+          {knife.category}/{knife.brand} : {knife.description} 
         </li>
         )}
     </div>

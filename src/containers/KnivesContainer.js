@@ -14,4 +14,3 @@ class KnivesContainer extends React.Component {
   }
 }
 export default KnivesContainer
-//

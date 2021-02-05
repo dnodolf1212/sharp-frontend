@@ -1,5 +1,6 @@
 import React from 'react';
-import OwnersContainer from './containers/OwnersContainer';
+import { Header } from './components/Header.js'
+
 
 class App extends React.Component {
 
@@ -7,7 +8,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <OwnersContainer />
+        <h3>Hi, Primary User. I have the header in me</h3>
+        <Header />
+        
       </div>
     );
   }

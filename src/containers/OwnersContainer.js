@@ -7,6 +7,7 @@ import OwnerShow from '../components/OwnerShow.js';
 import OwnerInput from '../components/OwnerInput.js';
 
 
+
 class OwnersContainer extends React.Component {
 
   componentDidMount() {
@@ -25,6 +26,7 @@ class OwnersContainer extends React.Component {
           <Route path='/owners' render={(routerProps) => 
             <Owners {...routerProps} owners={this.props.owners}/>} />
         </Switch>
+        <br />
       </div>
     )
   }

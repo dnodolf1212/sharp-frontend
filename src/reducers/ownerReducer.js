@@ -1,6 +1,5 @@
 
 export default function ownerReducer(state = { owners: [] }, action) {
-  debugger;
   switch(action.type) {
     case 'FETCH_OWNERS':
       return { owners: action.payload }

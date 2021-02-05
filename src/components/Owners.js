@@ -1,6 +1,5 @@
 import React from 'react';
-import {  Link } from 'react-router-dom';
-//import OwnerShow from './OwnerShow.js'
+import { Link } from 'react-router-dom';
 
 const Owners = (props) => {
    
