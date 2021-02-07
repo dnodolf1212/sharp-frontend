@@ -1,7 +1,7 @@
 import React from 'react';
   
 const Knives = (props) => {
-  debugger;
+
   return (
     
     <div>
