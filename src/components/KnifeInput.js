@@ -11,8 +11,6 @@ class KnifeInput extends React.Component {
     description: '',
     for_sale: false,
     likes: 0,
-    featured_image: null,
-    image_url: null
   }
 
   handleOnChange = (e) => {
@@ -23,38 +21,31 @@ class KnifeInput extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append('category', this.state.category);
-    formData.append('brand', this.state.brand);
-    formData.append('price', this.state.price);
-    formData.append('description', this.state.description);
-    formData.append('for_sale', this.state.for_sale);
-    formData.append('likes', this.state.likes);
-    formData.append('featured_image', this.state.featured_image);
-    this.props.createKnife(formData, this.props.owner.id)
+    this.props.createKnife(this.state, this.props.owner.id) // add this.state.featured_image??
+    this.setState({
+      category: '', 
+      brand: '',
+      price: 0, 
+      description: '',
+      for_sale: false,
+      likes: 0,
+    })
   }
-  
-  onImageChange = event => { 
-    this.setState({ featured_image: event.target.files[0] }); 
-  };
 
-    
-  //this.props.createKnife(this.state, this.props.owner.id) // add this.state.featured_image??
-  //  this.setState({
-  //    category: '', 
-  //    brand: '',
-  //    price: 0, 
-  //    description: '',
-  //    for_sale: false,
-  //    likes: 0,
-  //    featured_image: ''
-  //  })
-
+    //const formData = new FormData();
+    //    formData.append('category', this.state.category);
+    //    formData.append('brand', this.state.brand);
+    //    formData.append('price', this.state.price);
+    //    formData.append('description', this.state.description);
+    //    formData.append('for_sale', this.state.for_sale);
+    //    formData.append('likes', this.state.likes);
+    //    formData.append('featured_image', this.state.featured_image);
+    //    this.props.createKnife(formData, this.props.owner.id)
   
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} >
           <label>New Knife Form: </label><br/>
           <input type="text" placeholder="category" 
           onChange={this.handleOnChange} name="category" value={this.state.category} />
@@ -82,10 +73,6 @@ class KnifeInput extends React.Component {
           <br/>
           <input type="text" placeholder="likes" 
           onChange={this.handleOnChange} name="likes" value={this.state.likes} />
-          <br />
-
-          <input type='file' accept='image/*' multiple={false} 
-          onChange={this.onImageChange} />
           <br />
 
           <input type="submit" value="Submit" />

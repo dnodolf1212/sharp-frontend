@@ -11,7 +11,7 @@ export const Header = () => {
   
    <nav className="nav-wrap">
      <div className="container">
-       <a className="logo">Lookin' Sharp --- > LOGO</a> 
+       <div className="logo">Lookin' Sharp --- > LOGO</div> 
        <h1>These are links in the Header</h1>
         <ul>
           <li><Link to='/home'> Home </Link></li>
