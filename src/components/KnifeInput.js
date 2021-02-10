@@ -69,12 +69,6 @@ class KnifeInput extends React.Component {
           onChange={this.handleOnChange} name="price" value={this.state.price} />
            <br/>
 
-          <label>LIKES:</label>
-          <br/>
-          <input type="text" placeholder="likes" 
-          onChange={this.handleOnChange} name="likes" value={this.state.likes} />
-          <br />
-
           <input type="submit" value="Submit" />
         </form>
       </div> 
