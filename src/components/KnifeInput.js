@@ -44,7 +44,7 @@ class KnifeInput extends React.Component {
   
   render() {
     return (
-      <div>
+      <div className="knife-form" style={{textAlign: "left"}}>
         <form onSubmit={this.handleSubmit} >
           <label>New Knife Form: </label><br/>
           <input type="text" placeholder="category" 

@@ -7,8 +7,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <h3>Hi, Primary User. I have the header in me</h3>
+      <div className="App" style={{ backgroundColor: "#8D918D", width: "fullwidth", minHeight: "fullheight", textAlign: "left", color: "white"}}>
+        <h3>Hi, Primary User.</h3>
         <Header />
         
       </div>
