@@ -31,16 +31,6 @@ class KnifeInput extends React.Component {
       likes: 0,
     })
   }
-
-    //const formData = new FormData();
-    //    formData.append('category', this.state.category);
-    //    formData.append('brand', this.state.brand);
-    //    formData.append('price', this.state.price);
-    //    formData.append('description', this.state.description);
-    //    formData.append('for_sale', this.state.for_sale);
-    //    formData.append('likes', this.state.likes);
-    //    formData.append('featured_image', this.state.featured_image);
-    //    this.props.createKnife(formData, this.props.owner.id)
   
   render() {
     return (
