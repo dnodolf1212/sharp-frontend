@@ -14,16 +14,17 @@ class OwnersContainer extends React.Component {
   }
   
   render() {  
+    const { owners } = this.props;
     return (
       <div>
         <Switch>
           <Route path='/owners/new' component={OwnerInput}/>
 
           <Route path='/owners/:id' render={(routerProps) => 
-            <OwnerShow {...routerProps} owners={this.props.owners}/>} />
+            <OwnerShow {...routerProps} owners={owners}/>} />
 
           <Route path='/owners' render={(routerProps) => 
-            <Owners {...routerProps} owners={this.props.owners}/>} />
+            <Owners {...routerProps} owners={owners}/>} />
         </Switch>
         <br />
       </div>
