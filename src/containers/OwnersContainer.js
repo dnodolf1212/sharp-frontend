@@ -10,7 +10,8 @@ import OwnerInput from '../components/OwnerInput.js';
 class OwnersContainer extends React.Component {
 
   componentDidMount() {
-    this.props.fetchOwners()
+    const { fetchOwners } = this.props;
+    fetchOwners();
   }
   
   render() {  

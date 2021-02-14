@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Owners = (props) => {
-  console.log(props)
   return (
     
     <div style={{ textAlign: "left"}}>

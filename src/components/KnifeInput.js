@@ -33,30 +33,31 @@ class KnifeInput extends React.Component {
   }
   
   render() {
+    const { category, brand, description, for_sale, price } = this.state;
     return (
       <div className="knife-form" style={{textAlign: "left"}}>
         <form onSubmit={this.handleSubmit} >
           <label>New Knife Form: </label><br/>
           <input type="text" placeholder="category" 
-          onChange={this.handleOnChange} name="category" value={this.state.category} />
+          onChange={this.handleOnChange} name="category" value={category} />
           <br />
 
           <input type="text" placeholder="brand" 
-          onChange={this.handleOnChange} name="brand" value={this.state.brand} />
+          onChange={this.handleOnChange} name="brand" value={brand} />
           <br />
           
           <input type="text" placeholder="description" 
-          onChange={this.handleOnChange} name="description" value={this.state.description} />
+          onChange={this.handleOnChange} name="description" value={description} />
           <br />
 
           <label>For Sale?</label>
           <input type="checkbox" placeholder="for_sale" 
-          onChange={this.handleOnChange} name="for_sale" value={this.state.for_sale} />
+          onChange={this.handleOnChange} name="for_sale" value={for_sale} />
           <br />
           <label>Price</label>
           <br/>
           <input type="text" placeholder="price" 
-          onChange={this.handleOnChange} name="price" value={this.state.price} />
+          onChange={this.handleOnChange} name="price" value={price} />
            <br/>
 
           <input type="submit" value="Submit" />
