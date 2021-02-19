@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Owners = (props) => {
   return (
     
-    <div style={{ textAlign: "left"}}>
+    <div>
       <h1>Owners</h1>
       {props.owners && props.owners.map( owner => 
         <div key={owner.id}> 
