@@ -16,6 +16,7 @@ export default function ownerReducer(state = { owners: [] }, action) {
         }
       })
       return {...state, owners: owners}
+      
     default:
       return state
   }

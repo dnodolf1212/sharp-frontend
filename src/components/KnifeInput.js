@@ -21,7 +21,7 @@ class KnifeInput extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.createKnife(this.state, this.props.owner.id) // add this.state.featured_image??
+    this.props.createKnife(this.state, this.props.owner.id) 
     this.setState({
       category: '', 
       brand: '',
