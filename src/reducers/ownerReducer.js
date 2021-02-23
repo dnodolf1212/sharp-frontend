@@ -16,7 +16,17 @@ export default function ownerReducer(state = { owners: [] }, action) {
         }
       })
       return {...state, owners: owners}
-      
+
+      case 'DELETE_KNIFE':
+      let boredOwners = state.owners.map( owner => {
+        if (owner.id === action.payload.id) {
+          return action.payload
+        } else {
+          return owner
+        }
+      })
+      return {...state, owners: boredOwners}
+
     default:
       return state
   }
