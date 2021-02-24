@@ -8,14 +8,13 @@ class KnifeInput extends React.Component {
     category: '', 
     brand: '',
     price: 0, 
-    description: '',
-    for_sale: false,
-    likes: 0,
+    description: ''
   }
 
   handleOnChange = (e) => {
+    const { name, value } = e.target
     this.setState({
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
@@ -26,14 +25,12 @@ class KnifeInput extends React.Component {
       category: '', 
       brand: '',
       price: 0, 
-      description: '',
-      for_sale: false,
-      likes: 0,
-    })
-  }
+      description: ''
+    });
+  };
   
   render() {
-    const { category, brand, description, for_sale, price } = this.state;
+    const { category, brand, description, price } = this.state;
     return (
       <div className="knife-form" style={{textAlign: "left"}}>
         <form onSubmit={this.handleSubmit} >
@@ -50,10 +47,6 @@ class KnifeInput extends React.Component {
           onChange={this.handleOnChange} name="description" value={description} />
           <br />
 
-          <label>For Sale?</label>
-          <input type="checkbox" placeholder="for_sale" 
-          onChange={this.handleOnChange} name="for_sale" value={for_sale} />
-          <br />
           <label>Price</label>
           <br/>
           <input type="text" placeholder="price" 

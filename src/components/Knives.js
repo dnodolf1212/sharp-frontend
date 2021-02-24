@@ -13,9 +13,22 @@ const Knives = (props) => {
     <div>
       {props.knives && props.knives.map( knife => 
         <li key={knife.id}>
-         {knife.category}/{knife.brand} : {knife.description} <br/>
-          <p>Price:</p>  {knife.price} 
+         <label>Category:  </label>
+         {knife.category}
+         <br/>
+
+         <label>Brand:  </label>
+          {knife.brand} 
+         <br/>
+
+         <label>Description: </label>
+         {knife.description} 
+         <br/>
+
+         <label>Price: </label>  
+         {knife.price} 
           <br/>
+
           <button onClick={ () => {handleDelete(knife)}}>
             Delete ME!
           </button>

@@ -7,9 +7,9 @@ const OwnerShow = (props) => {
 
   return (
     <>
-      <h3>
+      <h1>
         {owner ? owner.ownername : null} - {owner ? owner.location : null} 
-      </h3>
+      </h1>
       <KnivesContainer owner={owner}/>
     </>
   )
