@@ -14,12 +14,12 @@ class App extends React.Component {
               color: "white"}}
             >
         <h3 style={{padding: "10px"}}>Hi, Primary User.</h3>
-
+        
         <img src={nikiri} alt="aknife" 
         style={{display: "block", 
                 marginLeft: "auto", 
                 marginRight: "auto"}}
-              />
+                />
 
         <Header />
         
