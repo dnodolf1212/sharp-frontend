@@ -31,7 +31,7 @@ class OwnerInput extends React.Component { //controlled form with local state
     return(
       <div>
         <form onSubmit={this.handleOnSubmit}>
-          <label>Knife Owner Form:</label>
+          <label>New Owner Form:</label>
           <br />
 
           <input type="text" placeholder="ownername" 

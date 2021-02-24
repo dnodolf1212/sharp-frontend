@@ -6,9 +6,11 @@ class KnivesContainer extends React.Component {
  
   render(){
     return(
-      <div>
-        <KnifeInput owner={this.props.owner}/>
-        <Knives knives={this.props.owner && this.props.owner.knives}/>
+      <div className="knife-zone">
+        <div className="knife-input">
+          <KnifeInput owner={this.props.owner} />
+        </div>
+        <Knives knives={this.props.owner && this.props.owner.knives} />
       </div>
     )
   }

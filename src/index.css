@@ -7,19 +7,38 @@ body, html, #root {
   user-select: none;
 }
 
+.container h1 {
+  font-size: 50px;
+}
+
 .nav-wrap {
   background-color: inherit;
   list-style-type: none;
   text-align: center; 
   color: white;
-  padding: 0;
-  margin: 0;
+  padding: 10px;
+  margin: 10px;
   border: 3px solid rgb(85, 85, 84);
 }
 
 .nav-wrap li {
   display: inline-block;
   font-size: 20px;
-  padding: 20px;
+  padding: 30px;
+}
+
+.knife-input {
+  padding: 5px;
+}
+
+.knife-zone {
+  display: inline-flex;
+}
+
+.knife-zone li {
+  margin: 3px;
+  padding: 3px;
+  border: 3px solid rgb(85, 85, 84);
+  
 }
 
