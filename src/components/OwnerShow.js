@@ -2,7 +2,7 @@ import React from 'react';
 import KnivesContainer from '../containers/KnivesContainer';
 
 const OwnerShow = (props) => {
-  //let owner = props.owners[props.match.params.id - 1]
+  
   let owner = props.owners.filter(owner => owner.id == props.match.params.id)[0]
 
   return (
