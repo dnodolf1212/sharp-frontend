@@ -8,14 +8,18 @@ import OwnerInput from '../components/OwnerInput.js';
 
 
 class OwnersContainer extends React.Component {
+  
+  
 
   componentDidMount() {
     const { fetchOwners } = this.props;
     fetchOwners();
   }
+
   
-  render() {  
+  render() { 
     const { owners } = this.props;
+     
     return (
       <div>
         <Switch>
@@ -25,7 +29,7 @@ class OwnersContainer extends React.Component {
             <OwnerShow {...routerProps} owners={owners}/>} />
 
           <Route path='/owners' render={(routerProps) => 
-            <Owners {...routerProps} owners={owners}/>} />
+            <Owners {...routerProps} owners={owners} />} />
         </Switch>
         <br />
       </div>
@@ -33,9 +37,9 @@ class OwnersContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => { 
+const mapStateToProps = state => {  
   return {
-   owners: state.owners 
+    owners: state.owners
   }
 }
 
